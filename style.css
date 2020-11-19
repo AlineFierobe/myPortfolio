@@ -9,6 +9,7 @@ Requires PHP: 5.6
 Text Domain: Portfolio
 Tags: custom-theme, portfolio, one-page, web-dev
 */
+
 /**************************** IMPORT *****************************/
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&family=Yanone+Kaffeesatz:wght@300;400;700&display=swap");
 
@@ -307,88 +308,258 @@ header nav ul li a {
   border-radius: 8px;
 }
 
+/******************************** PAGE & SINGLE PROJECT ********************************/
+
+/* LOOP FOR LIST OF PROJECTS */
+.loop-projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.loop-projects-items {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+.loop-projects-items h3 a {
+  color: var(--dark-color);
+  font-size: 3rem;
+}
+
+.loop-projects-items-thumbnail {
+  width: 250px;
+  height: 150px;
+  border: 2px solid var(--dark-color);
+  border-radius: 8px;
+}
+
+/* ALL PROJECTS PAGE */
+.page-projects-article {
+  width: 80%;
+  margin: auto;
+}
+
+.noMore {
+  display: none;
+}
+
+.page-projects-article h1 {
+  text-align: center;
+  font-size: 5rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.page-projects-content {
+  font-size: 1.7rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* TEMPLATE FOR ONE SINGLE PROJECT */
+.single-project-article {
+  width: 80%;
+  margin: auto;
+}
+
+.single-project-article h1 {
+  font-size: 5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.single-project-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.single-project-content {
+  flex: auto;
+  font-size: 1.7rem;
+}
+
+.single-project-content p + h1,
+.single-project-content p + h2,
+.single-project-content p + h3,
+.single-project-content p + h4,
+.single-project-content p + h5,
+.single-project-content p + h6 {
+  margin-top: 3rem;
+}
+
+.single-project-content p {
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.single-project-content ul {
+  margin-left: 5rem;
+  list-style-type: "» ";
+}
+
+.single-project-aside {
+  flex-basis: 300px;
+  align-self: flex-start;
+  background: var(--dark-color);
+  color: var(--light-color);
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.single-project-aside h3 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 1.5rem;
+  text-transform: uppercase;
+}
+.single-project-aside h6 {
+  margin-top: 1.2rem;
+  font-size: 1.9rem;
+  text-transform: uppercase;
+}
+
+.single-project-aside p + h6 {
+  margin-top: 2rem;
+}
+
+.single-project-aside p {
+  font-size: 1.3rem;
+}
+.single-project-aside div {
+  text-align: center;
+  font-size: 1.7rem;
+  margin-bottom: 2rem;
+}
+
+.single-project-aside p span.role {
+  font-style: italic;
+}
+
+.single-project-aside p a {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.single-project-aside p a svg {
+  fill: var(--light-color);
+  width: 50px;
+}
+
+.browserLogo {
+  width: 35px;
+}
+
 /*************************** CONTACT ****************************/
 .contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--dark-color);
-    color: var(--light-color);
-    flex-flow: column;
-    justify-content: space-between;
-    min-height: 100vh;
-  }
-  
-  .contact-container {
-    width: 70%;
-    margin: auto;
-    flex: auto;
-    display: flex;
-    flex-flow: row-reverse;
-    justify-content: space-between;
-    align-items: stretch;
-  }
-  
-  .contact-container h2 {
-    font-size: 10rem;
-    text-transform: uppercase;
-    flex: 1;
-    width: 100%;
-    align-self: flex-start;
-    writing-mode: vertical-lr;
-    text-orientation: mixed;
-  }
-  
-  .contact-elem {
-    flex: 4;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 2rem;
-  }
-  
-  .contact-elem p {
-    font-size: 2rem;
-    font-weight: 300;
-    margin-left: 5rem;
-  }
-  .contact-elem a {
-    color: var(--light-color);
-  }
-  .contact-items {
-    display: flex;
-    flex-flow: column;
-  }
-  
-  a.btn-cv {
-    display: inline;
-    margin: auto;
-    font-family: var(--font-title);
-    background: var(--light-color);
-    color: var(--dark-color);
-    padding: 1rem;
-    border-radius: 8px;
-    font-size: 1.8rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
-  }
-  
-  .contact-items img {
-    margin-bottom: 2rem;
-    width: 20rem;
-  }
-  .contact-items-logo {
-    text-align: center;
-  }
-  
-  .contact-items-logo a svg {
-    width: 5rem;
-    fill: var(--light-color);
-  }
-  
-  footer span {
-    flex-basis: 1.5rem;
-    font-size: 1.3rem;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--dark-color);
+  color: var(--light-color);
+  flex-flow: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.contact-container {
+  width: 70%;
+  margin: auto;
+  flex: auto;
+  display: flex;
+  flex-flow: row-reverse;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.contact-container h2 {
+  font-size: 10rem;
+  text-transform: uppercase;
+  flex: 1;
+  width: 100%;
+  align-self: flex-start;
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+}
+
+.contact-elem {
+  flex: 4;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+}
+
+.contact-elem p {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-left: 5rem;
+}
+.contact-elem a {
+  color: var(--light-color);
+}
+.contact-items {
+  display: flex;
+  flex-flow: column;
+}
+
+a.btn-cv {
+  display: inline;
+  margin: auto;
+  font-family: var(--font-title);
+  background: var(--light-color);
+  color: var(--dark-color);
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.contact-items img {
+  margin-bottom: 2rem;
+  width: 20rem;
+}
+.contact-items-logo {
+  text-align: center;
+}
+
+.contact-items-logo a svg {
+  width: 5rem;
+  fill: var(--light-color);
+}
+
+footer span {
+  flex-basis: 1.5rem;
+  font-size: 1.3rem;
+}
+/******************************** GENERIC PAGE ********************************/
+/* GENERIC PAGE */
+.page-article {
+  width: 80%;
+  margin: auto;
+}
+
+.page-article h1 {
+  text-align: center;
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+
+.page-content {
+  min-height: 70vh;
+  font-size: 1.7rem;
+}
+/* FOOTER PAGE */
+footer div {
+  font-size: 1.5rem;
+  text-align: center;
+}
