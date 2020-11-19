@@ -675,3 +675,257 @@ footer div {
 #ligneBasDroit {
   animation: ligneBasDroit 1s linear forwards 1s;
 }
+
+/********************************** RESPONSIVE MOBILE ***********************************/
+
+@media only screen and (max-width: 500px) {
+  /* GENERAL */
+  body {
+    width: 100%;
+  }
+
+  /************************* HEADER + HOME **************************/
+  header.headerHome nav {
+    display: none; /* HIDE NAV */
+  }
+  header {
+    flex-direction: column;
+  }
+  .home {
+    padding-top: 0;
+  }
+
+  header {
+    flex-direction: row;
+  }
+
+  header.headerHome {
+    flex-direction: column;
+  }
+
+  header svg {
+    width: 20rem;
+  }
+
+  /*************************** KNOWLEDGE ****************************/
+  .knowledge h2 {
+    font-size: 7rem;
+    writing-mode: horizontal-tb;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .knowledge-container {
+    max-width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .knowledge-elem img {
+    align-self: center;
+    margin-bottom: 2rem;
+  }
+
+  .knowledge-elem fieldset {
+    min-width: 95%;
+    align-self: center;
+  }
+  .knowledge-elem legend {
+    font-size: 3.5rem;
+    text-align: center;
+    margin: 0rem 0rem;
+    padding: 0rem 2rem;
+  }
+
+  .language-items,
+  .tool-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10rem 10rem;
+    grid-auto-rows: 10rem 10rem;
+  }
+  .language-items span,
+  .tool-items span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem;
+  }
+  /*************************** PROJECTS ****************************/
+  .projects-container {
+    max-width: 100%;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .projects h2 {
+    font-size: 7rem;
+    writing-mode: horizontal-tb;
+    margin-top: 1rem;
+    transform: rotate(0deg);
+    align-self: center;
+  }
+  .projects-elem {
+    justify-content: center;
+    align-items: center;
+  }
+  .projects-elem img {
+    align-self: center;
+    margin-bottom: 2rem;
+  }
+  .projects-items {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .projects-items h3 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .projects-items .projects-items-thumbnail {
+    width: 300px;
+    height: 170px;
+  }
+
+  .projects-items-container {
+    margin-right: 0;
+    grid:
+      "project1" 200px
+      "project2" 200px
+      / 1fr;
+    height: 400px;
+  }
+
+  .projects-see-all {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .projects-see-all a {
+    background-color: var(--dark-color);
+    padding: 1.5rem;
+    color: var(--light-color);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    border-radius: 8px;
+  }
+
+  /* PAGE WITH ALL PROJECT
+  LOOP PROJECTS */
+  .noMore {
+    display: block;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .loop-projects {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .loop-projects-items {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+  }
+
+  .loop-projects-items h3 a {
+    color: var(--dark-color);
+    font-size: 3rem;
+  }
+
+  .loop-projects-items-thumbnail {
+    width: 250px;
+    height: 150px;
+  }
+
+  /* TEMPLATE FOR ONE SINGLE PROJECT */
+
+  .single-project-main {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .single-project-aside {
+    width: 100%;
+    align-self: flex-start;
+    background: var(--dark-color);
+    color: var(--light-color);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .single-project-aside h3 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 1.5rem;
+    text-transform: uppercase;
+  }
+  .single-project-aside h6 {
+    margin-top: 1.2rem;
+    font-size: 1.9rem;
+    text-transform: uppercase;
+  }
+
+  .single-project-aside p {
+    font-size: 1.5rem;
+  }
+  .single-project-aside div {
+    text-align: center;
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+  }
+
+  .single-project-aside p span {
+    font-style: italic;
+  }
+
+  /*************************** CONTACT ****************************/
+
+  .contact-container {
+    width: 100%;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-container h2 {
+    font-size: 7rem;
+    writing-mode: horizontal-tb;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .contact-elem {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .contact-elem p {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  a.btn-cv {
+    padding: 1.5rem;
+    font-size: 2.5rem;
+  }
+
+  .contact-items-logo a svg {
+    width: 7rem;
+  }
+
+  footer span {
+    flex-basis: 2.5rem;
+    font-size: 1.7rem;
+  }
+}
